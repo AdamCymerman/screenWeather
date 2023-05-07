@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Hourly Weather Forecast</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <!--<script src="\var\www\html\node_modules\chartjs-plugin-annotation\dist\chartjs-plugin-annotation.min.js"></script>-->
+    <script src="G:\HTML\weather\node_modules\chartjs-plugin-annotation\dist\chartjs-plugin-annotation.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <header>
+        <p id="date"></p>
+        <div id="weather-stats"></div>
+        <div id="current-weather"></div>
+    </header>
+    <canvas id="chart"></canvas>
+    <script>
+        const today = new Date();
+        const options = { weekday: 'long', month: 'long', day: 'numeric' };
+        const formattedDate = today.toLocaleString('en-US', options);
+        document.getElementById('date').textContent = formattedDate;
+    </script>
+</body>
+</html>
